@@ -1,44 +1,9 @@
-package makingChange;
+package change;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 
-public class MakingChange {
-
-  public static void MakeChange() {
-
-    
-    // Reading the contents of the file
-    Scanner in;
-    try {
-      in = new Scanner(new File("input.txt"));
-    }
-    catch (FileNotFoundException e) {
-      System.out.println("file not found");
-      return;
-    }
-    int n = in.nextInt(); //number of denominations
-
-    //Denomations Array
-    Integer[] denomArray = new Integer[n]; 
-    for (int i = 0; i < n; i++) {
-      denomArray[i] = in.nextInt();
-    }
-
-    //getting in the number of total goals
-    int k = in.nextInt(); 
-    
-    // Array of goals to solve for
-    Integer[] goalArray = new Integer[k]; 
-    for (int i = 0; i < k; i++) { 
-      goalArray[i] = in.nextInt(); //getting in all the goals  from the list. 
-    }
-
-    SolveBottomUp(denomArray, goalArray);
-  }
+public class BottomUp {
 
   public static void SolveBottomUp(Integer[] denoms, Integer[] goals) {
     
@@ -60,7 +25,7 @@ public class MakingChange {
     
     // now that solution table is done, print all the solutions found
     for (int goal : goals) { 
-      System.out.print(goal + " cents = " + SolutionToString(solutionTable[goal], denoms));
+      System.out.print(goal + " cents = " + Utilities.SolutionToString(solutionTable[goal], denoms));
     }
   }
 
@@ -87,20 +52,5 @@ public class MakingChange {
 
       return optimalSolution;
     }
-  }
-
-  // print a given solution in the specified format
-  public static String SolutionToString(Solution s, Integer[] denoms) {
-    String result = "";
-    for (int i = 0; i < denoms.length; i++) {
-      // add denom and corresponding count
-      result += denoms[i] + ":" + s.denoms[i];
-      
-      // if more denoms to print, add a space
-      if (i < denoms.length - 1) {
-        result += " ";
-      }
-    }
-    return result;
   }
 }

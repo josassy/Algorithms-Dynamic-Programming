@@ -1,4 +1,4 @@
-package makingChange;
+package change;
 
 public class Solution {
   
