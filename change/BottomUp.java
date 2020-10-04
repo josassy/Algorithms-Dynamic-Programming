@@ -25,7 +25,7 @@ public class BottomUp {
     
     // now that solution table is done, print all the solutions found
     for (int goal : goals) { 
-      System.out.print(goal + " cents = " + Utilities.SolutionToString(solutionTable[goal], denoms));
+      System.out.println(goal + " cents = " + Utilities.SolutionToString(solutionTable[goal], denoms));
     }
   }
 
