@@ -1,4 +1,4 @@
-package proj2;
+package makingChange;
 
 public class Solution {
   

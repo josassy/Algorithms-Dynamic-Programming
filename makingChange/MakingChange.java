@@ -1,4 +1,4 @@
-package proj2;
+package makingChange;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 
 public class MakingChange {
 
-  public static void main(String[] args) {
+  public static void MakeChange() {
 
     
     // Reading the contents of the file
