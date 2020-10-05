@@ -32,5 +32,7 @@ public class Main {
       goalArray[i] = in.nextInt(); //getting in all the goals  from the list. 
     }
     BottomUp.SolveBottomUp(denomArray, goalArray);
+    Memoization.SolveMemoization(denomArray, goalArray);
+    Recursive.SolveRecursive(denomArray, goalArray);
   }
 }
