@@ -22,7 +22,7 @@ public class Change {
 
     // loop up to max goal from bottom up, building table
     for (int i = 1; i <= maxGoal; i++) {
-      solutionTable[i] = Optimal(solutionTable, denoms, i);
+      solutionTable[i] = OptimalBottomUp(solutionTable, denoms, i);
     }
     
     // now that solution table is done, print all the solutions found
