@@ -1,20 +1,11 @@
 package change;
 
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 
 public class Main {
   public static void main(String[] args) {
     // Reading the contents of the file
-    Scanner in;
-    try {
-      in = new Scanner(new File("input.txt"));
-    }
-    catch (FileNotFoundException e) {
-      System.out.println("file not found");
-      return;
-    }
+    Scanner in = new Scanner(System.in);
     int n = in.nextInt(); //number of denominations
 
     //Denomations Array
@@ -34,5 +25,7 @@ public class Main {
     Change.SolveBottomUp(denomArray, goalArray);
     Change.SolveMemoization(denomArray, goalArray);
     Change.SolveRecursive(denomArray, goalArray);
+
+    in.close();
   }
 }
