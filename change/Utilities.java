@@ -1,3 +1,10 @@
+/**
+  File:    Utilities.java
+  @author: Josiah R Lansford & Rufus Roby Mathew
+  @description: Simple helper function to print a given solution to string in
+                the required format.
+*/
+
 package change;
 
 public class Utilities {

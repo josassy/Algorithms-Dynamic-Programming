@@ -1,3 +1,9 @@
+/**
+  File:    Main.java
+  @author: Josiah R Lansford & Rufus Roby Mathew
+  @description: Accept input for change calculation and call each of the desired algorithms.  
+*/
+
 package change;
 
 import java.util.Scanner;
@@ -22,6 +28,7 @@ public class Main {
     for (int i = 0; i < k; i++) { 
       goalArray[i] = in.nextInt(); //getting in all the goals  from the list. 
     }
+
     Change.SolveBottomUp(denomArray, goalArray);
     Change.SolveMemoization(denomArray, goalArray);
     Change.SolveRecursive(denomArray, goalArray);

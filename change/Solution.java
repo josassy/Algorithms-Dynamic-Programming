@@ -1,3 +1,10 @@
+/**
+  File:    Solution.java
+  @author: Josiah R Lansford & Rufus Roby Mathew
+  @description: Represent a Solution to be stored in a solution table.
+                Counts the total cost, and the coins in each denomination.
+*/
+
 package change;
 
 public class Solution {

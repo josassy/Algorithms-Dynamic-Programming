@@ -1,3 +1,25 @@
+/**
+  File:    Change.java
+  @author: Josiah R Lansford & Rufus Roby Mathew
+  @description: Contains algorithms to solve the change problem using Dyanmic 
+                Programming and a naive recursive algorithm. Descriptions of
+                each algorithm are as follows:
+
+  BOTTOM UP: Identify max goal, create solution table, and iteratively fill out
+  the soution table using the OptimalBottomUp function. This function checks for
+  an entry in the solution table, and if it does not exist, calculates the
+  ideal answer from previous iterations, using min(goal - denoms[i]) to select.
+  Once an optimal solution is found, return as Solution object to caller.
+
+  MEMOIZATION: Identify max goal, create solution table, and recursively fill
+  out the table in no particular order. The recursive function checks for an
+  entry in the solution table, checks for the base case (0), and then
+  recursively determines the lowest previous solution. Once a solution is found,
+  store in the solution table and return to caller.
+
+  TOP-DOWN: Same as memoization, but without the solution table or caching.
+*/
+
 package change;
 
 import java.util.Arrays;
