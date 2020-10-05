@@ -47,7 +47,7 @@ public class BottomUp {
 
       // Construct new Solution object, increment denomination selected;
       Solution optimalSolution = new Solution(bestLowerSolution.cost + 1);
-      optimalSolution.denoms = bestLowerSolution.denoms;
+      optimalSolution.denoms = bestLowerSolution.denoms.clone();
       optimalSolution.denoms[denomIndexToIncrement]++;
 
       return optimalSolution;
